@@ -4,10 +4,13 @@
       <a href="#" class="logo">
         <img src="/img/logo.svg" alt="">
       </a>
-      <ul>
+    </div>
+    <div class="right">
+      <button class="menu fas fa-bars" :class="{'active' : menuToggle}" @click.prevent="menuToggle = !menuToggle"></button>
+      <ul class="hide-for-small-only">
         <li><a href="/">หน้าแรก</a></li>
         <li class="dropdown" v-on-clickaway="toggleDropdown">
-          <a @click.prevent="toggleDropdown(1)">สินค้า</a>
+          <a @click.prevent="toggleDropdown(1)">ผลิตภัณฑ์</a>
           <transition name="fade">
             <ul class="dropdown-content" v-show="dropdown == 1">
               <li><a href="#">dropdown</a></li>
@@ -19,22 +22,21 @@
         <li><a href="/contact">ติดต่อเรา</a></li>
       </ul>
     </div>
-    <div class="right">
-      <button class="menu fas fa-bars" :class="{'active' : menuToggle}" @click.prevent="menuToggle = !menuToggle"></button>
-    </div>
   </div>
 </nav>
 <transition name="menu">
   <div class="mobile-menu" v-show="menuToggle">
     <ul>
       <li><a href="/">หน้าแรก</a></li>
-      <li class="dropdown"><a :class="{'active' : dropdown == 1}" @click.prevent="toggleDropdown(1)">สินค้า</a></li>
-      <transition name="height" mode="out-in">
-        <div class="mobile-dropdown" v-show="dropdown == 1">
-          <li><a href="#">dropdown</a></li>
-          <li><a href="#">dropdown</a></li>
-        </div>
-      </transition>
+      <li class="dropdown">
+        <a :class="{'active' : dropdown == 1}" @click.prevent="dropdownMobile = !dropdownMobile">ผลิตภัณฑ์</a>
+      </li>
+
+      <div class="mobile-dropdown" v-show="dropdownMobile">
+        <li><a href="#">dropdown</a></li>
+        <li><a href="#">dropdown</a></li>
+      </div>
+
       <li><a href="/about">เกี่ยวกับเรา</a></li>
       <li><a href="/contact">ติดต่อเรา</a></li>
     </ul>

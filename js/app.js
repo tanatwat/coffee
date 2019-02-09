@@ -3,6 +3,7 @@ import {
   mixin as clickaway
 } from 'vue-clickaway';
 import smoothReflow from 'vue-smooth-reflow';
+import Parallax from 'vue-parallaxy';
 
 import AOS from 'aos';
 
@@ -18,6 +19,9 @@ window.document.addEventListener("DOMContentLoaded", function() {
         banners: ['#', '#']
       };
     },
+    components: {
+  Parallax
+},
     methods: {
       toggleDropdown(id) {
         // Vanilla version
@@ -27,9 +31,7 @@ window.document.addEventListener("DOMContentLoaded", function() {
           } else {
             this.dropdown = id
           }
-        } else {',
-      })
-    },
+        } else {
           this.dropdown = null
         }
       },

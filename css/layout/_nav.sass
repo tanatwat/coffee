@@ -62,8 +62,8 @@ nav.fixed
 
 @media (min-width: 768px)
   nav
-    background-color: $nav-bg
-    position: relative
+    background: $nav-bg
+    position: absolute
     height: $nav-height-medium
     padding: $nav-padding-medium
     .logo img
@@ -90,9 +90,10 @@ nav.fixed
     position: absolute
     right: 0
     margin: 0
-    background: $nav-bg
-    box-shadow: $nav-shadow
+    background: $dropdown-bg
+    box-shadow: $dropdown-shadow
     border: $nav-border
+    border-radius: 8px
     min-width: $dropdown-width
     flex-direction: column
     a

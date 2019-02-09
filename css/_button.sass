@@ -37,7 +37,7 @@ button.btn
         background-color: map-get($btn-active-bg, submit)
         border-color: map-get($btn-border-color-active, submit)
 
-//Social network button 
+//Social network button
 
 .social-btn
   display: block
@@ -96,3 +96,22 @@ button.btn
     &.messenger
       bottom: 30px
       right: 50px
+
+.button
+  border-radius: 4px !important
+  &.hollow
+    border-width: 2px !important
+
+.button.hollow.primary
+  color: $nav-link-hover !important
+  border-color: $nav-link-hover !important
+  &:hover
+    color: #fff !important
+    border-color: #fff !important
+
+.button.hollow.secondary
+  color: #805700 !important
+  border-color: #805700 !important
+  &:hover
+    color: $nav-link-hover !important
+    border-color: $nav-link-hover !important
