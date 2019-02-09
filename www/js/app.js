@@ -20,8 +20,7 @@ window.document.addEventListener("DOMContentLoaded", function() {
       };
     },
     components: {
-      parallax: Parallax,
-      scrollactive: VueScrollactive
+      parallax: Parallax
     },
     methods: {
       toggleDropdown(id) {
