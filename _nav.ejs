@@ -9,17 +9,17 @@
       <button class="menu fas fa-bars" :class="{'active' : menuToggle}" @click.prevent="menuToggle = !menuToggle"></button>
       <ul class="hide-for-small-only">
         <li><a href="/">หน้าแรก</a></li>
-        <li class="dropdown" v-on-clickaway="toggleDropdown">
-          <a @click.prevent="toggleDropdown(1)">ผลิตภัณฑ์</a>
-          <transition name="fade">
+        <li v-on-clickaway="toggleDropdown">
+          <a href="#products">ผลิตภัณฑ์</a>
+          <!-- <transition name="fade">
             <ul class="dropdown-content" v-show="dropdown == 1">
               <li><a href="#">dropdown</a></li>
               <li><a href="#">dropdown</a></li>
             </ul>
-          </transition>
+          </transition> -->
         </li>
-        <li><a href="/about">เกี่ยวกับเรา</a></li>
-        <li><a href="/contact">ติดต่อเรา</a></li>
+        <li><a href="#about">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact">ติดต่อเรา</a></li>
       </ul>
     </div>
   </div>
@@ -27,18 +27,16 @@
 <transition name="menu">
   <div class="mobile-menu" v-show="menuToggle">
     <ul>
-      <li><a href="/">หน้าแรก</a></li>
-      <li class="dropdown">
-        <a :class="{'active' : dropdown == 1}" @click.prevent="dropdownMobile = !dropdownMobile">ผลิตภัณฑ์</a>
-      </li>
+      <li><a href="#home" @click="menuToggle = false">หน้าแรก</a></li>
+      <li><a href="#products" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
 
-      <div class="mobile-dropdown" v-show="dropdownMobile">
+      <!-- <div class="mobile-dropdown" v-show="dropdownMobile">
         <li><a href="#">dropdown</a></li>
         <li><a href="#">dropdown</a></li>
-      </div>
+      </div> -->
 
-      <li><a href="/about">เกี่ยวกับเรา</a></li>
-      <li><a href="/contact">ติดต่อเรา</a></li>
+      <li><a href="#about" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
+      <li><a href="#contact" @click="menuToggle = false">ติดต่อเรา</a></li>
     </ul>
   </div>
 </transition>
