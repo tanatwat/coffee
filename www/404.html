@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Navigation</title>
+  <link rel="stylesheet" href="/css/app.min.css">
+
+  <script src="/dist/app.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Kanit|Mitr|Prompt" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+<body>
+  <div id="app">
+    <nav>
+  <div class="nav-wrapper">
+    <div class="left">
+      <a href="#" class="logo">
+        <img src="/img/logo.svg" alt="">
+      </a>
+    </div>
+    <div class="right">
+      <button class="menu fas fa-bars" :class="{'active' : menuToggle}" @click.prevent="menuToggle = !menuToggle"></button>
+      <ul class="hide-for-small-only">
+        <li><a href="/">หน้าแรก</a></li>
+        <li v-on-clickaway="toggleDropdown">
+          <a href="#products">ผลิตภัณฑ์</a>
+          <!-- <transition name="fade">
+            <ul class="dropdown-content" v-show="dropdown == 1">
+              <li><a href="#">dropdown</a></li>
+              <li><a href="#">dropdown</a></li>
+            </ul>
+          </transition> -->
+        </li>
+        <li><a href="#about">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<transition name="menu">
+  <div class="mobile-menu" v-show="menuToggle">
+    <ul>
+      <li><a href="#home" @click="menuToggle = false">หน้าแรก</a></li>
+      <li><a href="#products" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
+
+      <!-- <div class="mobile-dropdown" v-show="dropdownMobile">
+        <li><a href="#">dropdown</a></li>
+        <li><a href="#">dropdown</a></li>
+      </div> -->
+
+      <li><a href="#about" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
+      <li><a href="#contact" @click="menuToggle = false">ติดต่อเรา</a></li>
+    </ul>
+  </div>
+</transition>
+
+    <div class="container" id="home">
+      <div class="grid-container error-view">
+  <div class="grid-x text-center small-up-1">
+    <div class="cell">
+      <h1>404</h1>
+      <h2>ไม่พบหน้าที่คุณค้นหา</h2>
+      <a class="font-large" href="/index">กลับหน้าแรก</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <footer>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-3">
+      <div class="align-self-middle cell text-center">
+        <h3>LOGO</h3>
+      </div>
+      <div class="cell align-self-middle text-center">
+
+      </div>
+      <div class="cell align-self-middle text-center">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-line"></a>
+      </div>
+    </div>
+    <div class="text-center legal">
+      <p>Copyright (c) 2018 Copyright Holder All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <a href="#home" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+</body>
+
+</html>

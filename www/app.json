@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "harp-app-dev",
+            "script": "harp",
+            "args" : "server"
+        }
+    ]
+}
