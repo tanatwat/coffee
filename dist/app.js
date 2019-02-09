@@ -27140,8 +27140,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
       };
     },
     components: {
-      parallax: _vueParallaxy.default,
-      scrollactive: VueScrollactive
+      parallax: _vueParallaxy.default
     },
     methods: {
       toggleDropdown: function toggleDropdown(id) {
@@ -27214,7 +27213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43033" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40747" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
