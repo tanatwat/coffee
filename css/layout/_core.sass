@@ -1,6 +1,4 @@
 @import "../var"
-html
-  scroll-behavior: smooth
 
 body, html, #app
   margin: 0
@@ -24,6 +22,9 @@ nav
 
 footer
   flex-shrink: 0
+
+section
+  position: relative
 
 *
   box-sizing: inherit
@@ -68,3 +69,20 @@ a
 
 .scroll-prevent
   height: $nav-height-small
+  visibility: hidden
+  position: absolute
+  height: 50px
+  width: 100%
+  top: -50px
+
+.container-prevent
+  display: none
+  height: $nav-height-small
+  background: #000
+
+@media(min-width: 768px)
+  .scroll-prevent
+    top: 0
+  .container-prevent
+    display: block
+    height: $nav-height-medium + 5

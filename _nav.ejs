@@ -1,16 +1,16 @@
 <nav>
   <div class="nav-wrapper">
     <div class="left">
-      <a href="#" class="logo">
-        <img src="/img/logo.svg" alt="">
-      </a>
+      <div class="logo">
+        <a href="/">LOGO</a>
+      </div>
     </div>
     <div class="right">
       <button class="menu fas fa-bars" :class="{'active' : menuToggle}" @click.prevent="menuToggle = !menuToggle"></button>
       <ul class="hide-for-small-only">
         <li><a href="/">หน้าแรก</a></li>
         <li v-on-clickaway="toggleDropdown">
-          <a href="#products">ผลิตภัณฑ์</a>
+          <a v-scroll-to="'#products'">ผลิตภัณฑ์</a>
           <!-- <transition name="fade">
             <ul class="dropdown-content" v-show="dropdown == 1">
               <li><a href="#">dropdown</a></li>
@@ -18,8 +18,8 @@
             </ul>
           </transition> -->
         </li>
-        <li><a href="#about">เกี่ยวกับเรา</a></li>
-        <li><a href="#contact">ติดต่อเรา</a></li>
+        <li><a v-scroll-to="'#about'">เกี่ยวกับเรา</a></li>
+        <li><a v-scroll-to="'#contact'">ติดต่อเรา</a></li>
       </ul>
     </div>
   </div>
@@ -27,16 +27,16 @@
 <transition name="menu">
   <div class="mobile-menu" v-show="menuToggle">
     <ul>
-      <li><a href="#home" @click="menuToggle = false">หน้าแรก</a></li>
-      <li><a href="#products" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
+      <li><a href="/" @click="menuToggle = false">หน้าแรก</a></li>
+      <li><a v-scroll-to="'#products'" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
 
       <!-- <div class="mobile-dropdown" v-show="dropdownMobile">
         <li><a href="#">dropdown</a></li>
         <li><a href="#">dropdown</a></li>
       </div> -->
 
-      <li><a href="#about" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
-      <li><a href="#contact" @click="menuToggle = false">ติดต่อเรา</a></li>
+      <li><a v-scroll-to="'#about'" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
+      <li><a v-scroll-to="'#contact'" @click="menuToggle = false">ติดต่อเรา</a></li>
     </ul>
   </div>
 </transition>

@@ -17,6 +17,7 @@ nav
   border-bottom: $nav-border
   box-shadow: $nav-shadow
   .nav-wrapper
+    height: 100%
     display: flex
     margin: 0 auto
     max-width: $global-width
@@ -25,6 +26,10 @@ nav
     height: $nav-height-small
     max-width: 120px
     object-fit: contain
+  .logo a
+    font-size: 1.5rem
+    color: #fff
+    line-height: $nav-height-small
   ul
     display: flex
     margin: 0 0 0 30px
@@ -75,6 +80,8 @@ nav.fixed
         line-height: $nav-height-medium
     button.menu
       display: none
+    .logo a
+      line-height: $nav-height-medium
 
 @media (min-width: 1200px)
   nav

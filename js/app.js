@@ -5,9 +5,25 @@ import {
 import smoothReflow from 'vue-smooth-reflow';
 import Parallax from 'vue-parallaxy';
 
+import VueScrollTo from 'vue-scrollto';
+Vue.use(VueScrollTo, {
+     container: "body",
+     duration: 800,
+     easing: "ease",
+     offset: 0,
+     force: true,
+     cancelable: true,
+     onStart: false,
+     onDone: false,
+     onCancel: false,
+     x: false,
+     y: true
+ })
+
 import AOS from 'aos';
 
 window.document.addEventListener("DOMContentLoaded", function() {
+
   const app = new Vue({
     el: '#app',
     mixins: [clickaway, smoothReflow],
@@ -46,9 +62,9 @@ window.document.addEventListener("DOMContentLoaded", function() {
     },
     created() {
       AOS.init({
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 150, // values from 0 to 3000, with step 50ms
-        duration: 200, // values from 0 to 3000, with step 50ms
+        offset: 150, // offset (in px) from the original trigger point
+        delay: 250, // values from 0 to 3000, with step 50ms
+        duration: 300, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
