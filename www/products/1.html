@@ -26,7 +26,7 @@
       <ul class="hide-for-small-only">
         <li><a href="/">หน้าแรก</a></li>
         <li v-on-clickaway="toggleDropdown">
-          <a v-scroll-to="'#products'">ผลิตภัณฑ์</a>
+          <a href="/product">ผลิตภัณฑ์</a>
           <!-- <transition name="fade">
             <ul class="dropdown-content" v-show="dropdown == 1">
               <li><a href="#">dropdown</a></li>
@@ -34,8 +34,8 @@
             </ul>
           </transition> -->
         </li>
-        <li><a v-scroll-to="'#about'">เกี่ยวกับเรา</a></li>
-        <li><a v-scroll-to="'#contact'">ติดต่อเรา</a></li>
+        <li><a href="/about">เกี่ยวกับเรา</a></li>
+        <li><a href="/contact">ติดต่อเรา</a></li>
       </ul>
     </div>
   </div>
@@ -44,22 +44,21 @@
   <div class="mobile-menu" v-show="menuToggle">
     <ul>
       <li><a href="/" @click="menuToggle = false">หน้าแรก</a></li>
-      <li><a v-scroll-to="'#products'" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
+      <li><a href="/product" @click="menuToggle = false">ผลิตภัณฑ์</a></li>
 
       <!-- <div class="mobile-dropdown" v-show="dropdownMobile">
         <li><a href="#">dropdown</a></li>
         <li><a href="#">dropdown</a></li>
       </div> -->
 
-      <li><a v-scroll-to="'#about'" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
-      <li><a v-scroll-to="'#contact'" @click="menuToggle = false">ติดต่อเรา</a></li>
+      <li><a href="/about" @click="menuToggle = false">เกี่ยวกับเรา</a></li>
+      <li><a href="/contact" @click="menuToggle = false">ติดต่อเรา</a></li>
     </ul>
   </div>
 </transition>
 
     <div class="container" id="home">
-      <div class="container-prevent">
-</div>
+      <div class="container-prevent"></div>
 <div class="grid-container grid-x grid-padding-y grid-padding-x small-up-1 medium-up-2">
   <div class="cell grid-x" data-aos="fade-right">
     <h3 class="align-self-middle cell text-center" style="line-height:180px;background:#f1f1f1">รูปภาพ-ผลิตภัณฑ์-1</h3>

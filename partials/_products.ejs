@@ -1,0 +1,17 @@
+<section style="padding-top: 15px;">
+  <div class="scroll-prevent" id="products"></div>
+  <h1 class="text-center">ผลิตภัณฑ์ของเรา</h1>
+  <div class="grid-container grid-x grid-padding-y grid-padding-x small-up-1 medium-up-3">
+    <div class="cell" data-aos="fade-down" v-for="(product, index) in 3">
+      <h3 class="text-center" style="line-height:200px;background:#e6e6e6">รูปภาพ-ผลิตภัณฑ์-{{ index + 1 }}</h3>
+      <h3 class="text-center" style="padding-top: 10px;">ผลิตภัณฑ์ {{ index + 1 }}</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book.
+        It has survived not only five centuries, but also the leap.
+      </p>
+      <div class="text-center">
+        <a class="button primary hollow" :href="'/products/' + (index + 1)">อ่านเพิ่ม</a>
+      </div>
+    </div>
+  </div>
+</section>
